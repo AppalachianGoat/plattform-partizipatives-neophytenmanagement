@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { FarmerHelpRequestsFilter } from './FarmerHelpRequestsFilter';
 import { FarmerHelpRequestsTable } from './FarmerHelpRequestsTable';
+import { FarmerHelpRequestsMap } from './FarmerHelpRequestsMap';
 
 export class FarmerHelpRequests extends Component {
     constructor(props)  {
@@ -50,6 +51,7 @@ export class FarmerHelpRequests extends Component {
                 <p>Als Verein, Institution, etc. könnt ihr eure HIlfe anbieten oder in bestehenden Sammelaufrufen die passende Aktion auswählen</p>
                 <FarmerHelpRequestsFilter onFilterChange={this.handleFilterChange} />
                 <FarmerHelpRequestsTable farmerHelpRequests={this.state.farmerHelpRequests} />  
+                {/* <FarmerHelpRequestsMap farmerHelpRequests={this.state.farmerHelpRequests} />     */}
             </div>
         );
     }
