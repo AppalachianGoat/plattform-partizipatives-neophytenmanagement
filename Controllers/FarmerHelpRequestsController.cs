@@ -1,7 +1,9 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using plattform_partizipatives_neophytenmanagement.Data;
-using plattform_partizipatives_neophytenmanagement.Models; // Add the appropriate namespace for FarmerHelpRequest and FarmerHelperMatchContext
+using plattform_partizipatives_neophytenmanagement.Models;
+using plattform_partizipatives_neophytenmanagement.Services; // Add the appropriate namespace for FarmerHelpRequest and FarmerHelperMatchContext
 
 
 namespace plattform_partizipatives_neophytenmanagement.Controllers
@@ -11,13 +13,15 @@ namespace plattform_partizipatives_neophytenmanagement.Controllers
     public class FarmerHelpRequestsController : ControllerBase
     {
         private readonly FarmerHelperMatchContext _context;
+        private readonly IMapper _mapper;
 
-        public FarmerHelpRequestsController(FarmerHelperMatchContext context)
+        public FarmerHelpRequestsController(FarmerHelperMatchContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpPost("get")]
         public ActionResult<IEnumerable<FarmerHelpRequest>> GetFarmerHelpRequests()
         {
             return _context.FarmerHelpRequests.ToList();
@@ -36,9 +40,11 @@ namespace plattform_partizipatives_neophytenmanagement.Controllers
             return farmerHelpRequest;
         }
 
-        [HttpPost]
-        public ActionResult<FarmerHelpRequest> CreateFarmerHelpRequest(FarmerHelpRequest farmerHelpRequest)
+        [HttpPost("create")]
+        public ActionResult<FarmerHelpRequest> CreateFarmerHelpRequest(CreateFarmerHelpRequestDto farmerHelpRequestDto)
         {
+            var farmerHelpRequest = _mapper.Map<FarmerHelpRequest>(farmerHelpRequestDto);
+
             _context.FarmerHelpRequests.Add(farmerHelpRequest);
             _context.SaveChanges();
 
