@@ -1,3 +1,12 @@
+# Initial setup
+Install .NET 7.0 SDK
+Install Node.js 20.11.1
+
+## Running the project
+1. Start the docker container with `docker compose up -d`
+2. Run migrations with `dotnet ef database update`
+3. Have fun!
+
 # User Roles
 
 - Farmer: Manages land and requires help in dealing with invasive species
