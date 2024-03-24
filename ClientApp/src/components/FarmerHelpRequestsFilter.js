@@ -33,27 +33,29 @@ export class FarmerHelpRequestsFilter extends Component {
         return (
             <div id="farmer-help-request-filter">
                 <form onSubmit={this.handleSubmit}>
-                    <ul>
-                        <li>
-                            <input type="text" name="PLZ" placeholder="PLZ" onChange={this.handleChange} />
-                        </li>
-                        <li>
-                            <input type="number" name="Umkreis" placeholder="Umkreis" onChange={this.handleChange} />
-                        </li>
-                        <li>
-                            <input type="date" name="Anfangsdatum" placeholder="Anfangsdatum" onChange={this.handleChange} />
-                        </li>
-                        <li>
-                            <input type="date" name="Enddatum" placeholder="Enddatum" onChange={this.handleChange} />
-                        </li>
-                        <li>
-                            <input type="number" name="Einsatzdauer" placeholder="Einsatzdauer" onChange={this.handleChange} step="0.5" />
-                        </li>     
-                        <li>
-                            <input type="number" name="AnzPersonen" placeholder="Anz. Personen" onChange={this.handleChange} />
-                        </li>
-                    </ul>
-                    <button type="submit" class="neophyten-button">Filter</button>
+                    <div id="filter-inputs">
+                        <ul>
+                            <li>
+                                <input type="text" name="PLZ" placeholder="PLZ" onChange={this.handleChange} />
+                            </li>
+                            <li>
+                                <input type="number" name="Umkreis" placeholder="Umkreis" onChange={this.handleChange} />
+                            </li>
+                            <li>
+                                <input type="date" name="Anfangsdatum" placeholder="Anfangsdatum" onChange={this.handleChange} />
+                            </li>
+                            <li>
+                                <input type="date" name="Enddatum" placeholder="Enddatum" onChange={this.handleChange} />
+                            </li>
+                            <li>
+                                <input type="number" name="Einsatzdauer" placeholder="Einsatzdauer" onChange={this.handleChange} step="0.5" />
+                            </li>     
+                            <li>
+                                <input type="number" name="AnzPersonen" placeholder="Anz. Personen" onChange={this.handleChange} />
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="submit" class="neophyten-button" id="filter-button">Filter</button>
                 </form>
             </div>
         );
