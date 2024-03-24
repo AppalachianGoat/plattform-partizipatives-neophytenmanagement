@@ -10,7 +10,7 @@ namespace plattform_partizipatives_neophytenmanagement.Data
         public DbSet<HelperHelpOffer> HelperHelpOffers { get; set; }
         public DbSet<Negotiation> Negotiations { get; set; }
         public DbSet<InvasiveSpeciesType> InvasiveSpeciesTypes { get; set; }
-
+        public DbSet<Location> Locations { get; set; }
         public FarmerHelperMatchContext(DbContextOptions<FarmerHelperMatchContext> options) : base(options)
         {
         }
@@ -26,6 +26,14 @@ namespace plattform_partizipatives_neophytenmanagement.Data
                 .HasOne(n => n.HelperHelpOffer)
                 .WithMany()
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FarmerHelpRequest>()
+                .HasOne(f => f.OwnerUser)
+                .WithMany();
+
+            modelBuilder.Entity<HelperHelpOffer>()
+                .HasOne(h => h.OwnerUser)
+                .WithMany();
         }
     }
 }

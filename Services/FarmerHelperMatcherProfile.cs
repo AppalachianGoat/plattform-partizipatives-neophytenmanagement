@@ -8,6 +8,15 @@ namespace plattform_partizipatives_neophytenmanagement.Services
         public FarmerHelperMatcherProfile()
         {
             CreateMap<CreateFarmerHelpRequestDto, FarmerHelpRequest>();
+            CreateMap<CreateHelperHelpOfferDto, HelperHelpOffer>();
+
+            CreateMap<LocationDto, Location>();
+            CreateMap<Location, LocationDto>();
+
+            CreateMap<CreateUserDto, User>();
+
+            CreateMap<CreateInvasiveSpeciesTypeDto, InvasiveSpeciesType>();
+
         }
     }
 }

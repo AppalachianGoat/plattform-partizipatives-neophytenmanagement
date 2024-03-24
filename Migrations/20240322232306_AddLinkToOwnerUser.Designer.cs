@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using plattform_partizipatives_neophytenmanagement.Data;
@@ -11,9 +12,11 @@ using plattform_partizipatives_neophytenmanagement.Data;
 namespace plattformpartizipativesneophytenmanagement.Migrations
 {
     [DbContext(typeof(FarmerHelperMatchContext))]
-    partial class FarmerHelperMatchContextModelSnapshot : ModelSnapshot
+    [Migration("20240322232306_AddLinkToOwnerUser")]
+    partial class AddLinkToOwnerUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

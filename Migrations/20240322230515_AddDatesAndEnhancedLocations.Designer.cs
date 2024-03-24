@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using plattform_partizipatives_neophytenmanagement.Data;
@@ -11,9 +12,11 @@ using plattform_partizipatives_neophytenmanagement.Data;
 namespace plattformpartizipativesneophytenmanagement.Migrations
 {
     [DbContext(typeof(FarmerHelperMatchContext))]
-    partial class FarmerHelperMatchContextModelSnapshot : ModelSnapshot
+    [Migration("20240322230515_AddDatesAndEnhancedLocations")]
+    partial class AddDatesAndEnhancedLocations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +42,7 @@ namespace plattformpartizipativesneophytenmanagement.Migrations
                     b.Property<int>("NumberOfHelpers")
                         .HasColumnType("integer");
 
-                    b.Property<int>("OwnerUserId")
+                    b.Property<int>("OwnerId")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("StartDate")
@@ -51,8 +54,6 @@ namespace plattformpartizipativesneophytenmanagement.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("LocationId");
-
-                    b.HasIndex("OwnerUserId");
 
                     b.ToTable("FarmerHelpRequests");
                 });
@@ -77,7 +78,7 @@ namespace plattformpartizipativesneophytenmanagement.Migrations
                     b.Property<int>("NumberOfHelpers")
                         .HasColumnType("integer");
 
-                    b.Property<int>("OwnerUserId")
+                    b.Property<int>("OwnerId")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("StartDate")
@@ -89,8 +90,6 @@ namespace plattformpartizipativesneophytenmanagement.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("LocationId");
-
-                    b.HasIndex("OwnerUserId");
 
                     b.ToTable("HelperHelpOffers");
                 });
@@ -226,15 +225,7 @@ namespace plattformpartizipativesneophytenmanagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("plattform_partizipatives_neophytenmanagement.Models.User", "OwnerUser")
-                        .WithMany()
-                        .HasForeignKey("OwnerUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Location");
-
-                    b.Navigation("OwnerUser");
                 });
 
             modelBuilder.Entity("plattform_partizipatives_neophytenmanagement.Models.HelperHelpOffer", b =>
@@ -245,15 +236,7 @@ namespace plattformpartizipativesneophytenmanagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("plattform_partizipatives_neophytenmanagement.Models.User", "OwnerUser")
-                        .WithMany()
-                        .HasForeignKey("OwnerUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Location");
-
-                    b.Navigation("OwnerUser");
                 });
 
             modelBuilder.Entity("plattform_partizipatives_neophytenmanagement.Models.InvasiveSpeciesType", b =>

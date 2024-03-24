@@ -1,11 +1,15 @@
+using plattform_partizipatives_neophytenmanagement.Models;
+
 namespace plattform_partizipatives_neophytenmanagement.Services
 {
 
     public class CreateHelperHelpOfferDto
     {
-        public int OwnerId { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public int OwnerUserId { get; set; }
 
-        public string Location { get; set; }
+        public LocationDto Location { get; set; }
 
         public double DistanceFromLocation { get; set; }
 
