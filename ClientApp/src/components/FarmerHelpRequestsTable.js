@@ -1,9 +1,7 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useTable } from "react-table";
 
-const FarmerHelpRequestsTable = (props) => {
-    const [farmerHelpRequests, setFarmerHelpRequests] = useState([]);
-
+export const FarmerHelpRequestsTable = ({farmerHelpRequests}) => {
     const columns = useMemo(
         () => [
             {
@@ -70,5 +68,3 @@ const FarmerHelpRequestsTable = (props) => {
         </div>
     );
 }
-
-export default FarmerHelpRequestsTable;
