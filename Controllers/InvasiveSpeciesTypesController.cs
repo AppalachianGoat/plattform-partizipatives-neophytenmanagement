@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using plattform_partizipatives_neophytenmanagement.Models;
 
 namespace plattform_partizipatives_neophytenmanagement.Controllers
 {

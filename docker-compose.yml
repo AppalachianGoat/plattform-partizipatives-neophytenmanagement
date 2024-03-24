@@ -8,5 +8,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=your_password_here
       - POSTGRES_DB=farmhelperservice
+    ports:
+      - "5432:5432"
     volumes:
-      - ./src/FarmHelperService/Data/Migrations:/docker-entrypoint-initdb.d
+      - ./pgdata:/var/lib/postgresql/data

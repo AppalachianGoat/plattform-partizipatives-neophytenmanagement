@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using plattform_partizipatives_neophytenmanagement.Models;
 
 namespace plattform_partizipatives_neophytenmanagement.Data
 {
@@ -13,7 +11,7 @@ namespace plattform_partizipatives_neophytenmanagement.Data
         public DbSet<Negotiation> Negotiations { get; set; }
         public DbSet<InvasiveSpeciesType> InvasiveSpeciesTypes { get; set; }
 
-        public FarmHelperContext(DbContextOptions<FarmHelperContext> options) : base(options)
+        public FarmerHelperMatchContext(DbContextOptions<FarmerHelperMatchContext> options) : base(options)
         {
         }
 
@@ -22,13 +20,11 @@ namespace plattform_partizipatives_neophytenmanagement.Data
             modelBuilder.Entity<Negotiation>()
                 .HasOne(n => n.FarmerHelpRequest)
                 .WithMany()
-                .HasForeignKey(n => n.FarmerHelpRequestId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Negotiation>()
                 .HasOne(n => n.HelperHelpOffer)
                 .WithMany()
-                .HasForeignKey(n => n.HelperHelpOfferId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

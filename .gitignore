@@ -233,3 +233,6 @@ _Pvt_Extensions
 
 # Ignore development configuration
 appsettings.Development.json
+
+# Ignore database files
+pgdata

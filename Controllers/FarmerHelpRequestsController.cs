@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using plattform_partizipatives_neophytenmanagement.Data;
+using plattform_partizipatives_neophytenmanagement.Models; // Add the appropriate namespace for FarmerHelpRequest and FarmerHelperMatchContext
+
 
 namespace plattform_partizipatives_neophytenmanagement.Controllers
 {
@@ -10,9 +10,9 @@ namespace plattform_partizipatives_neophytenmanagement.Controllers
     [Route("api/v1/[controller]")]
     public class FarmerHelpRequestsController : ControllerBase
     {
-        private readonly FarmHelperContext _context;
+        private readonly FarmerHelperMatchContext _context;
 
-        public FarmerHelpRequestsController(FarmHelperContext context)
+        public FarmerHelpRequestsController(FarmerHelperMatchContext context)
         {
             _context = context;
         }

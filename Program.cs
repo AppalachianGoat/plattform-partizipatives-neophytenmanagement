@@ -1,8 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using plattform_partizipatives_neophytenmanagement.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
+
+// Add DbContext
+builder.Services.AddDbContext<FarmerHelperMatchContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 var app = builder.Build();
 

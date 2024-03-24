@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using plattform_partizipatives_neophytenmanagement.Data;
+using plattform_partizipatives_neophytenmanagement.Models;
 
 namespace plattform_partizipatives_neophytenmanagement.Controllers
 {
@@ -10,9 +9,9 @@ namespace plattform_partizipatives_neophytenmanagement.Controllers
     [Route("api/v1/[controller]")]
     public class NegotiationsController : ControllerBase
     {
-        private readonly FarmHelperContext _context;
+        private readonly FarmerHelperMatchContext _context;
 
-        public NegotiationsController(FarmHelperContext context)
+        public NegotiationsController(FarmerHelperMatchContext context)
         {
             _context = context;
         }
