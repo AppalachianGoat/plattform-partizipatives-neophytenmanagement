@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
+import './FarmerHelpRequestsTable.css';
 
 export const FarmerHelpRequestsTable = ({farmerHelpRequests}) => {
     const columns = useMemo(
@@ -32,7 +33,7 @@ export const FarmerHelpRequestsTable = ({farmerHelpRequests}) => {
 
     return (
         <div>
-            <table {...tableInstance.getTableProps()}>
+            <table class="farmer-help-request-table" {...tableInstance.getTableProps()}>
                 <thead>
                 {
                     tableInstance.headerGroups.map(headerGroup => (

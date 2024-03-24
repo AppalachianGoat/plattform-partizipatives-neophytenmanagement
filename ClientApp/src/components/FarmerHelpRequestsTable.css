@@ -1,0 +1,18 @@
+.farmer-help-request-table {
+    width: 100%; /* Make sure the table takes the full width */
+    border-collapse: collapse; /* Remove the space between cells */
+    margin-top: 20px;
+}
+
+.farmer-help-request-table tr:nth-child(even) {
+    background-color: #e1f3b5; /* Add a background color to even rows */
+}
+
+.farmer-help-request-table tr:nth-child(odd) {
+    background-color: #ffffff; /* Add a background color to odd rows */
+}
+
+.farmer-help-request-table td {
+    text-align: left; /* Align the text to the left */
+    padding: 8px; /* Add some padding */
+}
