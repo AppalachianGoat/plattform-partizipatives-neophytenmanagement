@@ -29,9 +29,11 @@ namespace plattform_partizipatives_neophytenmanagement.Controllers
             var filter_location = await _context.Locations.FirstAsync(l =>
                 l.LocationString == filterDto.Location);
 
-            var filteredResults = _context.FarmerHelpRequests
+            var allResults = _context.FarmerHelpRequests
                 .Include(f => f.Location)
-                .AsEnumerable()
+                .AsEnumerable();
+
+            var filteredResults = allResults
                 .Where(f =>
                     GeographyUtils.DistanceBetweenLocations(
                         f.Location.Latitude,
