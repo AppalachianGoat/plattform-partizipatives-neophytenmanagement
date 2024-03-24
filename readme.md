@@ -1,6 +1,6 @@
 # Initial setup
-Install .NET 7.0 SDK
-Install Node.js 20.11.1
+1. Install .NET 7.0 SDK
+1. Install Node.js 20.11.1
 
 ## Running the project
 1. Start the docker container with `docker compose up -d`
