@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
 import './FarmerHelpRequestsTable.css';
+import '../styles/buttons.css';
 
 export const FarmerHelpRequestsTable = ({farmerHelpRequests}) => {
     const columns = useMemo(
@@ -24,6 +25,15 @@ export const FarmerHelpRequestsTable = ({farmerHelpRequests}) => {
             {
                 Header: 'Anz. Personen',
                 accessor: 'numberOfHelpers',
+            },
+            {
+                Header: 'Register',
+                accessor: 'register',
+                Cell: () => (
+                    <button class="neophyten-button" onClick={() => { /* handle register event here */ }}>
+                        Register
+                    </button>
+                ),
             }
         ],
         []
@@ -33,7 +43,7 @@ export const FarmerHelpRequestsTable = ({farmerHelpRequests}) => {
 
     return (
         <div>
-            <table class="farmer-help-request-table" {...tableInstance.getTableProps()}>
+            <table className="farmer-help-request-table" {...tableInstance.getTableProps()}>
                 <thead>
                 {
                     tableInstance.headerGroups.map(headerGroup => (

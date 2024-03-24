@@ -12,20 +12,3 @@ ul li input {
     margin: 0 10px; /* Adjust as needed */
 }
 
-.neophyten-button {
-    background-color: #e1f3b5;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    max-width: 200px;
-}
-
-.neophyten-button:hover {
-    background-color: #abdd22;
-}
