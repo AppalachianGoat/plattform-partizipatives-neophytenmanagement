@@ -1,6 +1,7 @@
 // This component serves as the page to display the available farmer help requests that fit the user's search criteria.
 import React, { Component } from 'react';
 import { FarmerHelpRequestsFilter } from './FarmerHelpRequestsFilter';
+// import { FarmerHelpRequestsTable } from './FarmerHelpRequestsTable.js';
 
 export class FarmerHelpRequests extends Component {
     constructor(props)  {
@@ -14,14 +15,10 @@ export class FarmerHelpRequests extends Component {
     render() {
         return (
             <div>
-                <h1>Farmer Help Requests</h1>
-                <p>Here are the farmer help requests that fit your search criteria</p>
+                <h1>Jetzt Zäme sammle</h1>
+                <p>Als Verein, Institution, etc. könnt ihr eure HIlfe anbieten oder in bestehenden Sammelaufrufen die passende Aktion auswählen</p>
                 <FarmerHelpRequestsFilter onFilterChange={this.handleFilterChange} />
-                <ul>
-                    {this.state.farmerHelpRequests.map(farmerHelpRequest =>
-                        <li key={farmerHelpRequest.id}>{farmerHelpRequest.title}</li>
-                    )}
-                </ul>
+                {/* <FarmerHelpRequestsTable farmerHelpRequests={this.state.farmerHelpRequests} />   */}
             </div>
         );
     }
