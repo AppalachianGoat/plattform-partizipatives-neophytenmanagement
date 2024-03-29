@@ -24,6 +24,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="NSwag.AspNetCore" Version="14.0.7" />
+    <PackageReference Include="NSwag.CodeGeneration" Version="14.0.7" />
+    <PackageReference Include="NSwag.CodeGeneration.CSharp" Version="14.0.7" />
+    <PackageReference Include="NSwag.CodeGeneration.TypeScript" Version="14.0.7" />
     <PackageReference Include="NSwag.MSBuild" Version="14.0.7">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -63,7 +66,7 @@
     </ItemGroup>
   </Target>
 
-  <!-- <Target Name="NSwag" AfterTargets="Build" BeforeTargets="PublishRunWebpack">
+  <Target Name="NSwag" AfterTargets="Build" BeforeTargets="PublishRunWebpack">
     <Exec Command="$(NSwagExe_Net70) run nswag.json /variables:Configuration=$(Configuration),OutDir=$(OutDir)" />
-  </Target> -->
+  </Target>
 </Project>

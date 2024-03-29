@@ -8,7 +8,7 @@
             "configuration": null,
             "runtime": null,
             "targetFramework": null,
-            "noBuild": false,
+            "noBuild" : true,
             "verbose": false,
             "workingDirectory": null,
             "requireParametersWithoutDefault": false,
@@ -18,7 +18,7 @@
     "codeGenerators": {
         "openApiToTypeScriptClient": {
             "className": "{controller}Client",
-            "output": "./ClientApp/src/api/{controller}Client.ts",
+            "output": "./ClientApp/src/api/FarmerHelpServiceClients.ts",
             "useTransformOptionsMethod": true,
             "useTransformResultMethod": true
         }
