@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 using plattform_partizipatives_neophytenmanagement.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddOpenApiDocument();
 
 builder.Services.AddDbContext<FarmerHelperMatchContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -20,12 +20,6 @@ builder.Services.AddDbContext<FarmerHelperMatchContext>(options =>
 // Register AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// Register the Swagger generator, defining one or more Swagger documents
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,15 +33,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// Enable middleware to serve generated Swagger as a JSON endpoint.
-app.UseSwagger();
+// Add OpenAPI 3.0
+app.UseOpenApi();
 
-// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-// specifying the Swagger JSON endpoint.
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-});
+// Enable middleware to serve generated Swagger as a JSON endpoint.
+app.UseSwaggerUi();
 
 app.MapControllerRoute(
     name: "default",

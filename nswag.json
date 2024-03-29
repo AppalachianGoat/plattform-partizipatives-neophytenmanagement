@@ -1,0 +1,26 @@
+{
+    "runtime": "Net70",
+    "defaultVariables": null,
+    "documentGenerator": {
+        "aspNetCoreToOpenApi": {
+            "project": "./plattform-partizipatives-neophytenmanagement.csproj",
+            "msBuildProjectExtensionsPath": null,
+            "configuration": null,
+            "runtime": null,
+            "targetFramework": null,
+            "noBuild": false,
+            "verbose": false,
+            "workingDirectory": null,
+            "requireParametersWithoutDefault": false,
+            "apiGroupNames": null
+        }
+    },
+    "codeGenerators": {
+        "openApiToTypeScriptClient": {
+            "className": "{controller}Client",
+            "output": "./ClientApp/src/api/{controller}Client.ts",
+            "useTransformOptionsMethod": true,
+            "useTransformResultMethod": true
+        }
+    }
+}
