@@ -236,3 +236,4 @@ appsettings.Development.json
 
 # Ignore database files
 pgdata
+mssqldata

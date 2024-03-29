@@ -1,14 +1,13 @@
-version: '3.8'
+version: "3.8"
 
 services:
   db:
-    image: postgres
+    image: mcr.microsoft.com/mssql/server:2019-latest
     restart: always
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=your_password_here
-      - POSTGRES_DB=farmhelperservice
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=ChangeMe123!
     ports:
-      - "5432:5432"
+      - "1433:1433"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ./mssqldata:/var/opt/mssql/data
