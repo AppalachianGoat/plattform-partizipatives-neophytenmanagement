@@ -18,9 +18,7 @@
     "codeGenerators": {
         "openApiToTypeScriptClient": {
             "className": "{controller}Client",
-            "output": "./ClientApp/src/api/FarmerHelpServiceClients.ts",
-            "useTransformOptionsMethod": true,
-            "useTransformResultMethod": true
+            "output": "./ClientApp/src/api/FarmerHelpServiceClients.ts"
         }
     }
 }

@@ -33,10 +33,8 @@ export class FarmerHelpRequestsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetFarmerHelpRequests(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetFarmerHelpRequests(_response);
         });
     }
 
@@ -79,10 +77,8 @@ export class FarmerHelpRequestsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetFarmerHelpRequest(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetFarmerHelpRequest(_response);
         });
     }
 
@@ -122,10 +118,8 @@ export class FarmerHelpRequestsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processUpdateFarmerHelpRequest(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processUpdateFarmerHelpRequest(_response);
         });
     }
 
@@ -165,10 +159,8 @@ export class FarmerHelpRequestsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processDeleteFarmerHelpRequest(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processDeleteFarmerHelpRequest(_response);
         });
     }
 
@@ -209,10 +201,8 @@ export class FarmerHelpRequestsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processCreateFarmerHelpRequest(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processCreateFarmerHelpRequest(_response);
         });
     }
 
@@ -256,10 +246,8 @@ export class HelperHelpOffersClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetHelperHelpOffers(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetHelperHelpOffers(_response);
         });
     }
 
@@ -303,10 +291,8 @@ export class HelperHelpOffersClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processCreateHelperHelpOffer(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processCreateHelperHelpOffer(_response);
         });
     }
 
@@ -342,10 +328,8 @@ export class HelperHelpOffersClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetHelperHelpOffer(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetHelperHelpOffer(_response);
         });
     }
 
@@ -385,10 +369,8 @@ export class HelperHelpOffersClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processUpdateHelperHelpOffer(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processUpdateHelperHelpOffer(_response);
         });
     }
 
@@ -428,10 +410,8 @@ export class HelperHelpOffersClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processDeleteHelperHelpOffer(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processDeleteHelperHelpOffer(_response);
         });
     }
 
@@ -479,10 +459,8 @@ export class InvasiveSpeciesTypesClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGet(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGet(_response);
         });
     }
 
@@ -529,10 +507,8 @@ export class InvasiveSpeciesTypesClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processPut(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processPut(_response);
         });
     }
 
@@ -580,10 +556,8 @@ export class LocationClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetLocations(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetLocations(_response);
         });
     }
 
@@ -627,10 +601,8 @@ export class LocationClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processPostLocation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processPostLocation(_response);
         });
     }
 
@@ -666,10 +638,8 @@ export class LocationClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetLocation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetLocation(_response);
         });
     }
 
@@ -709,10 +679,8 @@ export class LocationClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processPutLocation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processPutLocation(_response);
         });
     }
 
@@ -752,10 +720,8 @@ export class LocationClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processDeleteLocation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processDeleteLocation(_response);
         });
     }
 
@@ -799,10 +765,8 @@ export class NegotiationsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetNegotiations(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetNegotiations(_response);
         });
     }
 
@@ -846,10 +810,8 @@ export class NegotiationsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processCreateNegotiation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processCreateNegotiation(_response);
         });
     }
 
@@ -885,10 +847,8 @@ export class NegotiationsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetNegotiation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetNegotiation(_response);
         });
     }
 
@@ -928,10 +888,8 @@ export class NegotiationsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processUpdateNegotiation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processUpdateNegotiation(_response);
         });
     }
 
@@ -971,10 +929,8 @@ export class NegotiationsClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processDeleteNegotiation(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processDeleteNegotiation(_response);
         });
     }
 
@@ -1025,10 +981,8 @@ export class UserClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processGetUser(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processGetUser(_response);
         });
     }
 
@@ -1068,10 +1022,8 @@ export class UserClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processUpdateUser(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processUpdateUser(_response);
         });
     }
 
@@ -1111,10 +1063,8 @@ export class UserClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processDeleteUser(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processDeleteUser(_response);
         });
     }
 
@@ -1155,10 +1105,8 @@ export class UserClient {
             }
         };
 
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.http.fetch(url_, transformedOptions_);
-        }).then((_response: Response) => {
-            return this.transformResult(url_, _response, (_response: Response) => this.processCreateUser(_response));
+        return this.http.fetch(url_, options_).then((_response: Response) => {
+            return this.processCreateUser(_response);
         });
     }
 
