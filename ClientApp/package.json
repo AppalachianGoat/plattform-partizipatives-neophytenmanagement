@@ -1,6 +1,7 @@
 {
   "name": "plattform_partizipatives_neophytenmanagement",
   "version": "0.1.0",
+  "proxy": "https://localhost:7136",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.2.3",

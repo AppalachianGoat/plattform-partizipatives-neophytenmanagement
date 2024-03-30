@@ -1,7 +1,9 @@
 import React, { FC, useState, useEffect } from 'react';
 import { FarmerHelpRequestsFilter } from './FarmerHelpRequestsFilter';
 import { FarmerHelpRequestsTable } from './FarmerHelpRequestsTable';
-import { FarmerHelpRequest, FarmerHelpRequestsClient, FilterFarmerHelpRequestDto } from '../api/FarmerHelpServiceClients.js';
+import { FarmerHelpRequest, FarmerHelpRequestsClient, FilterFarmerHelpRequestDto } from '../api/FarmerHelpServiceClients';
+
+const farmerHelpRequestsClient = new FarmerHelpRequestsClient();
 
 export const FarmerHelpRequests: FC = () => {
 
@@ -18,7 +20,7 @@ export const FarmerHelpRequests: FC = () => {
     
     useEffect(() => {
         async function getNewTableData() {
-            const currentTable = await FarmerHelpRequestsClient.getFarmerHelpRequests(farmerHelpFilter);
+            const currentTable = await farmerHelpRequestsClient.getFarmerHelpRequests(farmerHelpFilter);
             setFarmerHelpRequests(currentTable);
         }
         getNewTableData()
