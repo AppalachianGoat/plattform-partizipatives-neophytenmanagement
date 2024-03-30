@@ -66,3 +66,11 @@
 - Upgrade to .net8
 
 ## Functional
+
+- Authentication
+- Creation of post
+  - farmer help request
+  - helper help offer
+- Negotiation
+  - Creation based on a request or offer
+  - Management and conclusion
