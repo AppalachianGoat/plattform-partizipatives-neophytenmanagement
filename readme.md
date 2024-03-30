@@ -64,6 +64,5 @@
 ## Technical
 
 - Upgrade to .net8
-- Move frontend from js to ts
 
 ## Functional
