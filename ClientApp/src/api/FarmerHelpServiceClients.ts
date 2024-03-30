@@ -18,7 +18,7 @@ export class FarmerHelpRequestsClient {
         this.baseUrl = baseUrl ?? "";
     }
 
-    getFarmerHelpRequests(filterDto: FilterFarmerHelpRequestDto): Promise<FarmerHelpRequest[]> {
+    public getFarmerHelpRequests(filterDto: FilterFarmerHelpRequestDto): Promise<FarmerHelpRequest[]> {
         let url_ = this.baseUrl + "/api/v1/FarmerHelpRequests/get";
         url_ = url_.replace(/[?&]$/, "");
 
