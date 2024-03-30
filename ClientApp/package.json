@@ -1,6 +1,7 @@
 {
   "name": "plattform_partizipatives_neophytenmanagement",
   "version": "0.1.0",
+  "proxy": "https://localhost:7136",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.2.3",
@@ -35,6 +36,9 @@
     "workbox-streams": "^6.5.4"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
     "ajv": "^8.12.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.39.0",
@@ -43,6 +47,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
+    "jest": "^27.5.1",
     "nan": "^2.17.0",
     "typescript": "^4.9.5"
   },

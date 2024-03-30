@@ -68,6 +68,5 @@
 
   <Target Name="NSwag" AfterTargets="Build" BeforeTargets="PublishRunWebpack">
     <Exec Command="$(NSwagExe_Net70) run nswag.json /variables:Configuration=$(Configuration),OutDir=$(OutDir)" />
-    <Exec Command="tsc ./src/api/FarmerHelpServiceClients.ts" WorkingDirectory="$(SpaRoot)"/>
   </Target>
 </Project>
