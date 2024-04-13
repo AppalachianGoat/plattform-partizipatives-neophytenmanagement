@@ -2,6 +2,8 @@ import React, { FC, useState, useEffect } from 'react';
 import { FarmerHelpRequestsFilter } from './FarmerHelpRequestsFilter';
 import { FarmerHelpRequestsTable } from './FarmerHelpRequestsTable';
 import { FarmerHelpRequest, FarmerHelpRequestsClient, FilterFarmerHelpRequestDto } from '../api/FarmerHelpServiceClients';
+import { NavLink } from 'react-router-dom';
+import '../styles/buttons.css';
 
 const farmerHelpRequestsClient = new FarmerHelpRequestsClient();
 
@@ -29,6 +31,7 @@ export const FarmerHelpRequests: FC = () => {
     return (
         <div>
             <h1>Jetzt Zäme sammle</h1>
+            <NavLink className="link-button" to="/create-help-request">Create Help Request</NavLink>
             <p>Als Verein, Institution, etc. könnt ihr eure HIlfe anbieten oder in bestehenden Sammelaufrufen die passende Aktion auswählen</p>
             <FarmerHelpRequestsFilter filter={farmerHelpFilter} onFilterChange={setFilter} />
             <FarmerHelpRequestsTable farmerHelpRequests={farmerHelpRequests} />  

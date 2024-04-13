@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import {NavLink} from 'reactstrap';
 import "./Home.css"
-
+import "../styles/buttons.css"
 export class Home extends Component {
   static displayName = Home.name;
 
